@@ -291,7 +291,7 @@ li a:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 10%;
-    margin-top: 80px;
+    margin-top: 40px;
     align-items: center;
     justify-content: center;
     border-radius: 20vh 20vw;
@@ -1014,4 +1014,5 @@ paso para moviles y tabletas */
     #section_perfil {
         top: -1%;
     }
+
 }
