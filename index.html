@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malex_Web</title>
     <meta name="author" content="malexander98">
-    <link rel="shortcut icon" href="resources/icon_app.webp">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="resources/icon_app.webp">
 </head>
 
 <body>
@@ -20,11 +20,20 @@
             <h2>ale<span class="anim_nom_x">x</span></h2>
         </div>
         <ul>
+            <li><a class="nav" id="cont_hamburguer">Servicios</a></li>
             <li><a href="#section_perfil" class="nav">Perfil</a></li>
-            <li><a href="#servicios" class="nav">Servicios</a></li>
             <li><a href="#section_3" class="nav">Contacto</a></li>
         </ul>
     </nav>
+    <section id="hamburguer">
+        <ul>
+            <li><a href="#servicios_1" class="hamburguer_items">🌐 Sitios Web Estáticos</a></li>
+            <li><a href="#servicios_2" class="hamburguer_items">⚙️ Sitios Web Dinámicos</a></li>
+            <li><a href="#servicios_3" class="hamburguer_items">🖥️ Aplicaciones de Escritorio </a></li>
+            <li><a href="#servicios_4" class="hamburguer_items">📱 Aplicaciones Móviles </a></li>
+            <li><a href="#servicios_5" class="hamburguer_items">🤖 Automatización y Web Scraping </a></li>
+        </ul>
+    </section>
     <main>
 
         <!-- Seccion loading -->
@@ -51,10 +60,10 @@
             <div class="lista_eventos">
                 <div class="event_section">
                     <div>
-                        <!-- <img src="resources/my_photo_1.webp" alt=""> -->
+                        <img src="resources/icon_app.webp" alt="">
                         <h3>Aún no</h3>
-                        <p>Lo siento ... todavía no existen eventos, pero lo habrá y muy pronto ... solo espero a que
-                            la página llegue a 50 vistas. Corre y comparte ...</p>
+                        <p>Lo siento ... todavía no existen eventos, pero lo habrá y muy pronto ... Corre y comparte ...
+                        </p>
                     </div>
                     <!-- <a href="https://wa.me/qr/35IGXS5EXZARD1" class="button button_event">IR</a> -->
                 </div>
@@ -66,10 +75,11 @@
         <section class="section_1">
             <div class="perfil_info">
                 <h2>Miguel Alexander</h2>
-                <h3 class="secundary_color">Programador</h3>
-                <p>Sea bienvenido a mi sitio web. Espero que sea de su agrado. En el aprenderás un poquito sobre mí y el
-                    consagrado desempeño que realizo en el fascinante mundo de la programación de softwares y sitios
-                    web.
+                <h3 class="secundary_color">Soluciones Digitales a Tu Medida</h3>
+                <p>Transforma tu idea en una experiencia digital única. Ya sea una página web, una app móvil, una
+                    herramienta de escritorio o cualquier tarea de automatizacion o web scraping, tengo la solución
+                    perfecta para ti. Descubre cuál se adapta mejor a tus
+                    necesidades:
                 </p>
                 <div>
                     <a class="button button_ini" href="#section_perfil">Sobre mi</a>
@@ -81,6 +91,86 @@
             </div>
         </section>
 
+        <!-- Servicios que pueden pedir  -->
+
+        <h2 class="perfil_top_1 border_botton_body">Puedes llamarme si necesitas</h2>
+        <div class="card">
+            <section class="servicios">
+                <div class="card_1" id="servicios_1">
+                    <h3 class="border_botton_body">🌐 Sitios Web Estáticos</h3>
+                    <img src="resources/proyect_1.webp" alt="">
+                    <p class="primary_content">Rápidos, elegantes y funcionales.</p>
+                    <p class="secundary_color">Perfectos para portafolios, presentaciones, catálogos y páginas
+                        informativas. Cargan al instante, se ven increíbles en cualquier dispositivo y comunican tu
+                        mensaje con claridad.</p>
+                    <div>
+                        <p class="secundary_items">- Diseño moderno y adaptado a tu marca</p>
+                        <p class="secundary_items">- Animaciones y efectos visuales atractivos</p>
+                        <p class="secundary_items">- Optimización para velocidad y posicionamiento</p>
+                        <p class="secundary_items">- 100% responsivos</p>
+                    </div>
+                    <a href="#section_3" class="button button_ini">Lo quiero</a>
+                </div>
+                <div class="card_1" id="servicios_2">
+                    <h3 class="border_botton_body">⚙️ Sitios Web Dinámicos</h3>
+                    <img src="resources/proyect_2.webp" alt="">
+                    <p class="primary_content">Interactivos, automatizados y escalables.</p>
+                    <p class="secundary_color">Ideales para tiendas online, sistemas de reservas, blogs, plataformas
+                        educativas y más. Tus usuarios podrán registrarse, interactuar y navegar en un entorno
+                        personalizado.</p>
+                    <div>
+                        <p class="secundary_items">- Gestión de contenido y usuarios</p>
+                        <p class="secundary_items">- Formularios inteligentes y flujos automatizados</p>
+                        <p class="secundary_items">- Seguridad y rendimiento profesional</p>
+                        <p class="secundary_items">- Escalabilidad para crecer contigo</p>
+                    </div>
+                    <a href="#section_3" class="button button_ini">Lo quiero</a>
+                </div>
+                <div class="card_1" id="servicios_3">
+                    <h3 class="border_botton_body">🖥️ Aplicaciones de Escritorio</h3>
+                    <img src="resources/proyect_3.webp" alt="">
+                    <p class="primary_content">Tu herramienta personalizada, siempre disponible.</p>
+                    <p class="secundary_color">Diseñadas para funcionar directamente en tu computadora, sin depender del
+                        navegador. Perfectas para negocios, gestión interna, reportes y sistemas administrativos.</p>
+                    <div>
+                        <p class="secundary_items">- Interfaz intuitiva y profesional</p>
+                        <p class="secundary_items">- Compatible con Windows, macOS y Linux</p>
+                        <p class="secundary_items">- Instalación sencilla y experiencia fluida</p>
+                        <p class="secundary_items">- Ideal para uso empresarial o personal</p>
+                    </div>
+                    <a href="#section_3" class="button button_ini">Lo quiero</a>
+                </div>
+                <div class="card_1" id="servicios_4">
+                    <h3 class="border_botton_body">📱 Aplicaciones Móviles</h3>
+                    <img src="resources/proyect_4.webp" alt="">
+                    <p class="primary_content">Tu proyecto, en el bolsillo de tus clientes.</p>
+                    <p class="secundary_color">Conecta con tu audiencia desde cualquier lugar. Las apps móviles son
+                        ideales para reservas, ventas, encuestas, gestión y mucho más.</p>
+                    <div>
+                        <p class="secundary_items">- Funciona en Android y iOS</p>
+                        <p class="secundary_items">- Diseño atractivo y fácil de usar</p>
+                        <p class="secundary_items">- Experiencia rápida y directa</p>
+                        <p class="secundary_items">- Siempre al alcance de tus usuarios</p>
+                    </div>
+                    <a href="#section_3" class="button button_ini">Lo quiero</a>
+                </div>
+                <div class="card_1" id="servicios_5">
+                    <h3 class="border_botton_body">🤖 Automatización y Web Scraping</h3>
+                    <img src="resources/proyect_5.webp" alt="">
+                    <p class="primary_content">Haz que tu computadora trabaje por ti.</p>
+                    <p class="secundary_color">Convierte procesos tediosos en flujos automáticos que ahorran tiempo y
+                        esfuerzo.</p>
+                    <div>
+                        <p class="secundary_items">- Extrae información de sitios web de forma precisa</p>
+                        <p class="secundary_items">- Automatiza clics, formularios, descargas y navegación</p>
+                        <p class="secundary_items">- Ideal para reportes, análisis de mercado y monitoreo de precios</p>
+                        <p class="secundary_items">- Funciona en segundo plano, sin intervención constante</p>
+                    </div>
+                    <a href="#section_3" class="button button_ini">Lo quiero</a>
+                </div>
+        </div>
+        </section>
+
         <!-- Detalles de perfil  -->
 
         <section class="section_2">
@@ -89,52 +179,22 @@
                 <h2 class="perfil_top border_botton_body">Un poco sobre mi</h2>
                 <p>
                     Si has llegado aquí toca presentarme: Mi nombre ya lo debes saber en el <a href="#navbar">Home</a>
-                    pero bueno a lo que iba ... soy un apasionado programador que se dedica a la creación de programas
-                    de escritorio del tipo que sea, así como la creación de páginas web completas y profesionales.
-                    Actualmente trabajo con HTML5, Css3 y lenguajes de programación como Python y JavaScript incluyendo
-                    paquetes y frameworks como Flet, Django, Kivy-KivyMD, TtkBootstrap, NodeJs, React, Sass entre muchos
-                    otros que haría esto medio aburrido. Me hace sentir orgulloso que todo lo que he aprendido en cuanto
-                    a este tema fue gracias al esfuerzo propio y mi interés porque es cierto que en un principio hubiese
-                    querido que alguien me encaminara un poco en cuanto al orden lógico de aprendizaje pero al no tener
-                    esa persona me hizo llegar a entender que somos capaces de hacer lo que nos propongamos y punto.
+                    pero bueno a lo que iba ... soy un apasionado programador que se dedica a la ejecución de programas
+                    del tipo que sea, así como la creación de páginas web completas y profesionales. Actualmente trabajo
+                    con HTML5, Css3 y lenguajes de programación como Python, JavaScript y Dart (Flutter) incluyendo
+                    paquetes y frameworks como Flet, Django, Kivy, TtkBootstrap, PyautoGUI entre muchos otros que haría
+                    esto medio aburrido. Si algo he aprendido es que somos capaces de hacer lo que nos propongamos y
+                    punto.
                 </p>
-            </div>
-        </section>
-
-        <!-- Servicios que pueden pedir  -->
-
-        <section class="servicios" id="servicios">
-            <div class="card">
-                <h2 class="perfil_top_1 border_botton_body">Puedes llamarme si necesitas</h2>
-                <div class="card_1">
-                    <img src="resources/proyect_1.webp" alt="">
-                    <h3 class="border_botton_body">Programas de PC</h3>
-                    <p class="secundary_color">Automatiza todo lo que necesite por muy complejo que sea desde un
-                        programa
-                        100% funcional y certificado por usted mismo con tu propio toque y tu propia firma. Es el
-                        momento de
-                        ahorrarte todo el trabajo del mundo y hazte
-                        capaz de tener todo bajo control y como lo desee.</p>
-                    <a href="#section_3" class="button button_ini">Lo quiero</a>
-                </div>
-                <div class="card_1">
-                    <img src="resources/proyect_2.webp" alt="">
-                    <h3 class="border_botton_body">Páginas web</h3>
-                    <p class="secundary_color">Hágase ver desde cualquier parte del mundo y muestre cuan serio es su
-                        negocio o perfil personal. Tiene en su poder la facilidad de hacer que todos lo puedan ver: ya
-                        sean sus clientes o sus seguidores desde la comodidad de su casa o en cualquier parte que se
-                        encuentren.</p>
-                    <a href="#section_3" class="button button_ini">Lo quiero</a>
-                </div>
             </div>
         </section>
 
         <!-- Seccion de Contacto  -->
 
         <section class="section_3" id="section_3">
-            <h2 class="secundary_color">Contacto</h2>
-            <p>Puede seguirme en las redes sociales o contactarme directamente por mi WhatsApp para cualquier pregunta
-                con cualquier contenido de interés.</p>
+            <h2 class="secundary_color">¿Cuál es la solución ideal para ti?</h2>
+            <p>Estoy aquí para ayudarte a elegir, diseñar y lanzar la herramienta perfecta para tu proyecto.
+                ¡Conversemos y hagámoslo realidad!</p>
             <div class="container_social">
                 <div class="social">
                     <img src="resources/social1.webp" alt="" class="social_ico">
@@ -153,6 +213,10 @@
                     <a class="button button3" href="https://wa.me/qr/35IGXS5EXZARD1">Chatear</a>
                 </div>
             </div>
+        </section>
+
+        <section id="up">
+            <a href="#navbar"><img src="resources/up2.webp" alt=""></a>
         </section>
 
         <!-- Seccion nieve de dias atipicos -->
