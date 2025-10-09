@@ -27,6 +27,9 @@ const footer_day_p = document.querySelector('.footer_day_p');
 const copo = document.querySelectorAll('.copo');
 const loading_section = document.querySelector('.loading_section')
 const button_event = document.querySelectorAll('.button_event')
+const hamburguer = document.getElementById('hamburguer')
+const cont_hamburguer = document.getElementById('cont_hamburguer')
+const hamburguer_items = document.querySelectorAll('.hamburguer_items')
 
 /* Declarando variables para dias atipicos */
 
@@ -36,6 +39,25 @@ let button_bg_hover_color;
 let link_color_body;
 let color_gradiente;
 let text_footer_day;
+
+/* Animando Hamburguer */
+hamburguer_items.forEach(element => {
+    element.addEventListener('click', () => {
+        hamburguer.style.right = '-100%';
+        mostrar_hamburguer = false;
+    })
+});
+var mostrar_hamburguer = false
+cont_hamburguer.addEventListener('click', () => {
+    if (mostrar_hamburguer === false) {
+        hamburguer.style.right = '4%';
+        mostrar_hamburguer = true;
+    } else {
+        hamburguer.style.right = '-100%';
+        mostrar_hamburguer = false;
+    }
+
+})
 
 /* Animando y colocando nieve de fin de año */
 
@@ -62,9 +84,8 @@ window.addEventListener('load', () => {
 evento_img.addEventListener('mousedown', mostrar_evento);
 lista_eventos.style.display = 'none';
 if (button_event.length === 0) {
-    num_event.textContent = '-0';
+    num_event.textContent = '0';
 } else {
-    alert(button_event.length)
     num_event.textContent = `+${button_event.length}`;
 }
 
@@ -85,11 +106,11 @@ function mostrar_evento() {
 }
 
 function func_color() {
-    this.style.backgroundColor = button_bg_hover_color;
+    this.style.background = button_bg_hover_color;
 }
 
 function func_color_leave() {
-    this.style.backgroundColor = button_bg_color;
+    this.style.background = button_bg_color;
 }
 
 function func_link_hover() {
@@ -106,9 +127,10 @@ function func_link_leave() {
 function func_constructor_change() {
     bg_ini_color.style.background = `linear-gradient(90deg,var(--fondo_color),${color_gradiente}, var(--fondo_color))`;
     bg_contacto_color.style.background = `radial-gradient(${color_gradiente},var(--fondo_color))`;
+    bg_ini_color.style.boxShadow = `4px 1px 10px ${color_gradiente}`;
     bg_footer_color.style.background = `${color_gradiente}`;
     buttons.forEach(element => element.style.color = secundary_color_body);
-    buttons.forEach(element => element.style.backgroundColor = button_bg_color);
+    buttons.forEach(element => element.style.background = button_bg_color);
     buttons.forEach(element => element.addEventListener('mouseover', func_color));
     buttons.forEach(element => element.addEventListener('mouseleave', func_color_leave));
     secundary_color.forEach(element => element.style.color = secundary_color_body);
@@ -129,8 +151,8 @@ function fin_año_const(texto) {
     copo.forEach(element => element.style.display = 'inline')
     copo.forEach(element => element.style.position = 'fixed')
     secundary_color_body = '#b0c4c5';
-    button_bg_color = '#094e57';
-    button_bg_hover_color = '#26a09a';
+    button_bg_color = 'radial-gradient(#094e57, #042327ff)';
+    button_bg_hover_color = 'radial-gradient(#26a09a, #092726ff)';
     link_color_body = '#03f4e0';
     color_gradiente = '#0a2830';
     text_footer_day = texto;
@@ -141,8 +163,12 @@ function fin_año_const(texto) {
     func_constructor_change();
 }
 
-//console.log(fecha.valueOf());
-//console.log(secundary_color[0].style);
+/* Constructor para invierno */
+
+function invierno_const() {
+    copo.forEach(element => element.style.display = 'inline')
+    copo.forEach(element => element.style.position = 'fixed')
+}
 
 /* Dias atipicos */
 
@@ -156,8 +182,8 @@ if (mes === 1 && dia === 1) {
 
 else if (mes === 1 && dia === 6) {
     secundary_color_body = '#b0c5c5';
-    button_bg_color = '#095757';
-    button_bg_hover_color = '#269ca0';
+    button_bg_color = 'radial-gradient(#095757, #042020ff)';
+    button_bg_hover_color = 'radial-gradient(#269ca0, #0e383aff)';
     link_color_body = '#03f4e8';
     color_gradiente = '#0a302b';
     text_footer_day = `Día de los reyes magos!`;
@@ -167,13 +193,12 @@ else if (mes === 1 && dia === 6) {
     love_img.style.animationDuration = '16s';
     func_constructor_change();
 }
-
 /* 1 de mayo dia del trabajador */
 
 else if (mes === 5 && dia === 1) {
     secundary_color_body = '#b0b0c5';
-    button_bg_color = '#093157';
-    button_bg_hover_color = '#2826a0';
+    button_bg_color = 'radial-gradient(#093157, #06223bff)';
+    button_bg_hover_color = 'radial-gradient(#2826a0, #161558ff)';
     link_color_body = '#1b03f4';
     color_gradiente = '#0a1630';
     text_footer_day = `Felíz día internacional del trabajador!`;
@@ -188,8 +213,8 @@ else if (mes === 5 && dia === 1) {
 
 else if (mes === 5 && dia_semana === 0 && dia / 7 > 1.0 && dia / 7 <= 2.0) {
     secundary_color_body = '#c5b0c4';
-    button_bg_color = '#380957';
-    button_bg_hover_color = '#5b26a0';
+    button_bg_color = 'radial-gradient(#380957, #240638ff)';
+    button_bg_hover_color = 'radial-gradient(#5b26a0, #36175fff)';
     link_color_body = '#9c03f4';
     color_gradiente = '#300a26';
     text_footer_day = `Felíz día de las madres!. Muchas felicidades`;
@@ -199,3 +224,56 @@ else if (mes === 5 && dia_semana === 0 && dia / 7 > 1.0 && dia / 7 <= 2.0) {
     love_img.style.animationDuration = '16s';
     func_constructor_change();
 }
+
+/* 14 de febrero dia del amor y la amistad */
+
+else if (mes === 2 && dia === 14) {
+    secundary_color_body = '#c5b0b0';
+    button_bg_color = 'radial-gradient(#570909, #2b0505ff)';
+    button_bg_hover_color = 'radial-gradient(#a02626, #461010ff)';
+    link_color_body = '#f40303';
+    color_gradiente = '#300a17';
+    text_footer_day = `Felíz día del Amor y la Amistad!`;
+    love_img.src = 'resources/love.webp';
+    love_img.style.display = 'flex';
+    love_img.style.animationName = 'Anim_Love';
+    love_img.style.animationDuration = '16s';
+    func_constructor_change();
+}
+
+/* 3er domingo de junio dia de los padres */
+
+else if (mes === 6 && dia_semana === 0 && dia / 7 > 2.0 && dia / 7 <= 3.0) {
+    secundary_color_body = '#b0c5b7';
+    button_bg_color = 'radial-gradient(#095733, #06351fff)';
+    button_bg_hover_color = 'radial-gradient(#26a07b, #165844ff)';
+    link_color_body = '#03f467';
+    color_gradiente = '#0a302d';
+    text_footer_day = `Felíz día de los padres!. Muchas felicidades`;
+    love_img.src = 'resources/trabajador.webp';
+    love_img.style.display = 'flex';
+    love_img.style.animationName = 'Anim_Trabajador';
+    love_img.style.animationDuration = '16s';
+    func_constructor_change();
+}
+
+/* dia 24, 30 y 31 de diciembre */
+
+else if (mes === 12 && dia === 24) {
+    fin_año_const('Hoy es mi cumple y Día de noche buena!')
+}
+
+else if (mes === 12 && dia === 30) {
+    fin_año_const('Felíz fin de año para todos')
+}
+
+else if (mes === 12 && dia === 31) {
+    fin_año_const('Felíz fin de año para todos')
+}
+
+/* invierno */
+
+else if (mes === 12) {
+    invierno_const()
+}
+*/
