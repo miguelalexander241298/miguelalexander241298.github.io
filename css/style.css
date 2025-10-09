@@ -1,7 +1,7 @@
 /* Variables globales */
 
 :root {
-    --fondo_color: #121212;
+    --fondo_color: #141418;
     --texto_princ: #E0E0E0;
     --texto_secund: #B0BEC5;
     --acento_color: #FF4081;
@@ -14,6 +14,7 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 /* Detalles del cuerpo*/
@@ -31,6 +32,11 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 15px 0px;
+    background: linear-gradient(#0d0d13, var(--fondo_color));
+}
+
+.nav {
+    cursor: pointer;
 }
 
 .logo {
@@ -76,6 +82,29 @@ li a:hover {
     border-bottom-color: var(--enlace_color);
 }
 
+/* Hamburguer */
+
+#hamburguer {
+    max-width: 300px;
+    position: fixed;
+    transition: all 0.5s;
+    right: -100%;
+    z-index: 1;
+}
+
+#hamburguer ul {
+    display: flex;
+    background: var(--fondo_color);
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px #0b0b0f;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#hamburguer ul li {
+    margin-bottom: 20px;
+}
+
 /* Loading Section */
 
 .loading_section {
@@ -84,7 +113,7 @@ li a:hover {
     width: 100%;
     height: calc(100% + 50px);
     z-index: 4;
-    background: rgba(18, 18, 18, 0.95);
+    background: rgb(18, 18, 18);
     transition: all;
     transition-duration: 1s;
 }
@@ -162,8 +191,8 @@ li a:hover {
 }
 
 #icono_evento {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     cursor: pointer;
     animation-name: Anim_Evento;
@@ -186,7 +215,8 @@ li a:hover {
     position: relative;
     left: -60px;
     top: 85px;
-    background: rgba(1, 15, 26, 0.95);
+    background: var(--fondo_color);
+    box-shadow: 2px 2px 10px #0b0b0f;
     padding: 3%;
     border-radius: 0px 20px 20px 20px;
     max-height: 70vh;
@@ -195,7 +225,7 @@ li a:hover {
 
 .event_section {
     display: flex;
-    box-shadow: 2px 2px 10px #000000;
+    box-shadow: 2px 2px 10px #0b0b0f;
     padding: 3%;
     margin-bottom: 10px;
 }
@@ -230,7 +260,7 @@ li a:hover {
     justify-content: center;
     margin: 0px 2px;
     width: 10px;
-    /*display: flex;*/
+    display: flex;
     align-items: center;
 }
 
@@ -240,18 +270,19 @@ li a:hover {
     cursor: pointer;
     margin: 5px;
     padding: 15px 20px;
-    background-color: #194975;
+    box-shadow: inset 0px 0px 5px 5px #0d253b;
+    background: #19436b;
     color: var(--texto_secund);
     font-size: 15px;
     font-weight: 900;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     transition: all;
     transition-duration: 0.3s;
 }
 
 .button:hover {
-    background-color: #2665a0;
+    background: #1e5385;
 }
 
 /* Seccion de presentacion */
@@ -263,8 +294,9 @@ li a:hover {
     margin-top: 80px;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(90deg,var(--fondo_color),#0a2730, var(--fondo_color));
-    border-radius: 50vh 50vw;
+    border-radius: 20vh 20vw;
+    background: radial-gradient(#0a2230, var(--fondo_color));
+    box-shadow: 4px 1px 10px #2665a0;
 }
 
 .perfil_info {
@@ -272,8 +304,9 @@ li a:hover {
     text-align: center;
 }
 
-.perfil_info h2{
+.perfil_info h2 {
     font-size: 30px;
+    margin-bottom: 30px;
 }
 
 .perfil_info h3 {
@@ -301,7 +334,7 @@ li a:hover {
     min-width: 30wv;
     max-width: 400px;
     animation-duration: 2s;
-    box-shadow: 2px 2px 10px #2665a0;
+    box-shadow: 2px 2px 10px #242427;
 }
 
 /* Seccion mas detalles */
@@ -314,8 +347,9 @@ li a:hover {
     margin-top: 13%;
     padding: 30px 2%;
     align-content: center;
-    background: radial-gradient(#0a2230,var(--fondo_color));
+    background: radial-gradient(#0a2230, var(--fondo_color));
     border-radius: 50% 50px;
+    box-shadow: 2px 2px 10px #2665a0;
 }
 
 .sobre_mi {
@@ -330,11 +364,11 @@ li a:hover {
 
 #section_perfil {
     position: absolute;
-    right:10%;
+    right: 10%;
     top: -10%;
     flex-grow: initial;
-    border-radius:50% 30%;
-    width:40%;
+    border-radius: 50% 30%;
+    width: 40%;
 }
 
 .perfil_top {
@@ -366,13 +400,11 @@ p a {
 
 /* Seccion de servicios */
 
-.servicios {
+.perfil_top_1 {
     display: flex;
-    width: 92%;
-    margin: 4%;
-}
-
-.servicios h2 {
+    justify-content: center;
+    margin: 0% 25%;
+    width: 50%;
     padding-bottom: 10px;
     border-bottom: 2px solid;
     border-bottom-color: var(--enlace_color);
@@ -381,11 +413,12 @@ p a {
 .card {
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
-.perfil_top_1 {
-    position: absolute;
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card_1 {
@@ -394,32 +427,47 @@ p a {
     justify-content: start;
     flex-direction: column;
     align-items: center;
-    margin: 3%;
-    max-width: 500px;
-    margin-top: 100px;
+    max-width: 350px;
+    margin: 5%;
+    margin-top: 50px;
     padding: 10px;
-    width: 100%;
-    box-shadow: 2px 5px 10px #2a2a33;
+    box-shadow: 1px 4px 20px #0b0b0f;
     border-radius: 40px 0px 40px 0px;
 }
 
 .card_1 img {
-    width: 100%;
+    width: 95%;
     border-radius: 10%;
+    box-shadow: 1px 4px 10px #0b0b0f;
 }
 
 .card_1 h3 {
     margin: 20px 0px;
-    padding-bottom: 10px;
+    padding: 10px;
     border-bottom: 2px solid var(--enlace_color);
     font-size: 20px;
     text-align: center;
+    border-radius: 20px;
+    box-shadow: 1px 4px 20px #0b0b0f;
 }
 
-.card_1 p {
+.primary_content {
+    line-height: 25px;
+    margin: 20px 0px 0px 0px;
+    max-width: 280px;
+}
+
+.secundary_color {
     line-height: 25px;
     color: var(--texto_secund);
     margin: 10px;
+    max-width: 300px;
+}
+
+.secundary_items {
+    line-height: 25px;
+    color: var(--texto_secund);
+    margin: 10px 0px;
     max-width: 300px;
 }
 
@@ -437,13 +485,13 @@ p a {
     margin-top: 50px;
     margin-bottom: 30px;
     align-items: center;
-    background: radial-gradient(#0a302a,var(--fondo_color));
+    background: radial-gradient(#0a302a, var(--fondo_color));
     border-radius: 50px 30%;
 }
 
 .section_3 h2 {
     padding-left: 30px;
-    font-size: 35px;
+    font-size: 30px;
     color: var(--texto_secund);
 }
 
@@ -464,7 +512,7 @@ p a {
     display: flex;
     position: relative;
     border: 0.5px solid #3e7abf;
-    width: 250px;
+    width: 160px;
     margin: 5px;
     padding: 5px;
     height: 80px;
@@ -485,12 +533,12 @@ p a {
 
 .button2 {
     cursor: pointer;
-    background-color: #b3498f;
-    color: var(--fondo_color);
+    box-shadow: inset 0px 0px 5px 5px #311427;
+    background: #973e7a;
 }
 
 .button2:hover {
-    background-color: #faa4d6;
+    background: rgb(182, 74, 139);
 }
 
 .social3 {
@@ -500,35 +548,60 @@ p a {
 
 .button3 {
     cursor: pointer;
-    background-color: #459d72;
-    color: var(--fondo_color);
+    box-shadow: inset 0px 0px 5px 5px #11271c;
+    background: #357a59;
 }
 
 .button3:hover {
-    background-color: #bcf0a5;
+    background: #45af7c;
 }
 
 .social img {
     position: absolute;
-    left: -40px;
+    left: -20px;
     top: -9px;
     border-radius: 50%;
     transition: all 1s;
+    z-index: 1;
 }
 
 .social:hover img {
     transform: rotate(360deg);
-    left: 70px;
+    left: 65px;
+    top: -30px;
 }
 
 .social h3 {
-    padding: 5px 0px 0px 30%;
+    position: absolute;
+    transition: all 1s;
+    top: 5px;
+    right: 4px;
+}
+
+.social:hover h3 {
+    top: 5px;
+    right: 80px;
 }
 
 .social .button {
     position: absolute;
     bottom: -25px;
     right: 0px;
+}
+
+/* up */
+
+#up {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background: #3e7abf83;
+    box-shadow: 0px 0px 10px 3px #0b0b0f;
+    border-radius: 50%;
+}
+
+#up a img {
+    width: 50px;
 }
 
 /* nieve */
@@ -602,11 +675,12 @@ footer {
 /* Animacion de logo */
 
 @keyframes Photo_Anim {
-    0%{
+    0% {
         transform: scale(0);
     }
-    20%{
-        transform: translate(-45vw,-50vh) scale(0);
+
+    20% {
+        transform: translate(-45vw, -50vh) scale(0);
     }
 }
 
@@ -616,10 +690,12 @@ footer {
     25% {
         transform: rotate(45deg);
     }
-    50%{
+
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-45deg);
     }
 }
@@ -632,20 +708,24 @@ footer {
         font-size: 0px;
         transform: translateX(-50px) rotate(-360deg);
     }
+
     40% {
         color: var(--acento_color);
         transform: translateX(0px) rotate(720deg);
         font-size: 30px;
     }
+
     50% {
         color: var(--enlace_color);
         transform: rotate(35deg);
         font-size: 40px;
     }
+
     60% {
         transform: rotate(0deg);
         font-size: 30px;
     }
+
     80% {
         color: var(--acento_color);
     }
@@ -712,7 +792,7 @@ footer {
 /* Animacion de copos de nieve */
 
 @keyframes Anim_Copo_1 {
-    100%{
+    100% {
         top: 100%;
     }
 }
@@ -723,76 +803,93 @@ footer {
     0% {
         transform: rotate(225deg);
     }
+
     2.5% {
         transform: scale(0.8) rotate(225deg);
     }
+
     5% {
         transform: scale(1.2) rotate(225deg);
     }
+
     7.5% {
         transform: scale(0.8) rotate(225deg);
     }
+
     10% {
         transform: scale(1.2) rotate(225deg);
     }
+
     12.5% {
         transform: scale(0.8) rotate(225deg);
         right: 5%;
     }
+
     15% {
         transform: scale(1.2) rotate(225deg);
         top: 10%;
         right: 6%;
     }
+
     30% {
         transform: scale(0.1) rotate(-135deg);
         top: 110%;
         right: 15%;
     }
+
     31% {
         transform: scale(1);
         top: 100%;
         right: -25%;
     }
+
     32% {
         top: -10%;
         right: -15%;
     }
-    40%{
+
+    40% {
         transform: rotate(225deg);
         right: 5%;
         top: 10%;
     }
-    45%{
+
+    45% {
         transform: rotate(270deg);
         right: 5%;
         top: 10%;
     }
-    55%{
+
+    55% {
         transform: rotate(225deg) scale(0.6);
         right: 5%;
         top: 10%;
     }
-    65%{
+
+    65% {
         transform: rotate(180deg);
         right: 5%;
         top: 10%;
     }
-    75%{
+
+    75% {
         transform: rotate(225deg) scale(1.3);
         right: 5%;
         top: 10%;
     }
-    85%{
+
+    85% {
         transform: rotate(270deg);
         right: 5%;
         top: 10%;
     }
-    90%{
+
+    90% {
         transform: rotate(225deg);
         right: 5%;
         top: 10%;
     }
+
     100% {
         transform: rotate(225deg);
     }
@@ -804,73 +901,89 @@ footer {
     0% {
         transform: rotate(0deg);
     }
+
     5% {
         transform: scale(1.2) rotate(-45deg);
     }
+
     7.5% {
         transform: scale(0.8) rotate(0deg);
     }
+
     10% {
         transform: scale(1.2) rotate(0deg);
     }
+
     12.5% {
         transform: scale(0.8) rotate(0deg);
         right: 5%;
     }
+
     15% {
         transform: scale(1.2) rotate(0deg);
         top: 10%;
         right: 6%;
     }
+
     30% {
         transform: scale(0.1) rotate(-135deg);
         top: 110%;
         right: 15%;
     }
+
     31% {
         transform: scale(1);
         top: 100%;
         right: -25%;
     }
+
     32% {
         top: -10%;
         right: -15%;
     }
-    40%{
+
+    40% {
         transform: rotate(0deg);
         right: 5%;
         top: 10%;
     }
-    45%{
+
+    45% {
         transform: rotate(45deg);
         right: 5%;
         top: 10%;
     }
-    55%{
+
+    55% {
         transform: rotate(0deg) scale(0.6);
         right: 5%;
         top: 10%;
     }
-    65%{
+
+    65% {
         transform: rotate(-45deg);
         right: 5%;
         top: 10%;
     }
-    75%{
+
+    75% {
         transform: rotate(0deg) scale(1.3);
         right: 5%;
         top: 10%;
     }
-    85%{
+
+    85% {
         transform: rotate(45deg);
         right: 5%;
         top: 10%;
     }
-    90%{
+
+    90% {
         transform: rotate(0deg);
         right: 5%;
         top: 10%;
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -879,11 +992,11 @@ footer {
 /* Animacion del footer dias atipicos */
 
 @keyframes Anim_Footer {
-    50%{
+    50% {
         left: 0%;
     }
 
-    100%{
+    100% {
         left: -100%;
     }
 }
@@ -892,13 +1005,9 @@ footer {
 paso para moviles y tabletas */
 
 @media (max-width: 490px) {
-    .card {
-        flex-wrap: wrap;
-    }
-
     .section_3 {
         margin: 50px 10px;
-    }  
+    }
 }
 
 @media (max-width: 449px) {
